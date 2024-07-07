@@ -1,4 +1,5 @@
 import requests
+import os
 from dotenv import load_dotenv
 
 # 載入 .env 文件中的環境變數
