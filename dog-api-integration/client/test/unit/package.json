@@ -1,0 +1,15 @@
+{
+  "name": "unit",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "fetch-mock": "^10.0.8",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}
