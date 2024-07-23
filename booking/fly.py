@@ -18,15 +18,15 @@ def test_fly():
             browser = p.chromium.launch(headless=False)
             page = browser.new_page()
             page.goto('https://www.mandarin-airlines.com/b2c/bookingpaylater')
-            page.click('input#trip_oneway')
-            page.select_option('select#departureCity1', 'TSA')
-            page.select_option('select#arrivalCity1', 'KNH')
+            page.click('#trip_oneway')
+            page.select_option('#departureCity1','TSA')
+            page.select_option('#arrivalCity1', 'KNH')
             page.evaluate("""
                 const deptDateInput = document.querySelector('#deptDate4');
                 deptDateInput.removeAttribute('readonly');
                 deptDateInput.value = '2024-08-01';
             """)
-            page.locator('button.indexbtn[onclick="CheckSubmit()"]').click()
+            page.click('button.indexbtn')
             page.locator('.booking-list .booking-box .bookingbt').nth(1).click()
             page.locator('input#iagree').check()
             page.locator('div.btn.btn-go[onclick="javascript:doSubmit()"]').click()

@@ -1,4 +1,4 @@
-#!/bin/bash
+
 
 # 安装 Homebrew（如果未安装）
 if ! command -v brew &>/dev/null; then
