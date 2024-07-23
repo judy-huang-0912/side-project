@@ -1,6 +1,5 @@
 # API integration and simple fastapi server (frontend + api + unit test)
 
-
 ## Table of contents
 
 - <a href="#tech-stack">使用的套件列表</a>
