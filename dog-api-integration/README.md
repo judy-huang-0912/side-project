@@ -26,6 +26,9 @@
 source ~/.bash_profile
 pyenv activate myenv
 ```
+#### 安裝 serve 工具
+#### 導到當前目錄
+#### 啟動靜態server
 
 ```bash
 npm install -g serve
@@ -36,10 +39,15 @@ serve
 <h2 id="system-architecture">System Architecture</h2>
 
 前後端的溝通、資料流向，開API
+
 ![Full Stack Architecture Overview](screenshot/full-stack-architecture-overview.png)
+
 前端html,js分別做了哪些測試以及使用哪些工具
+
 ![Frontend Architecture Overview](screenshot/frontend-architecture-overview.png)
+
 後端 api server 做了哪些測試
+
 ![Backend Architecture Overview](screenshot/backend-architecture-overview.png)
 
 
