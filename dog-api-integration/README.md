@@ -42,7 +42,7 @@ serve
 
 ![Full Stack Architecture Overview](screenshot/full-stack-architecture-overview.png)
 
-前端html,js分別做了哪些測試以及使用哪些工具
+前端做了哪些測試以及使用哪些工具
 
 ![Frontend Architecture Overview](screenshot/frontend-architecture-overview.png)
 
