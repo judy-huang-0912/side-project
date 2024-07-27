@@ -20,7 +20,8 @@
 source ~/.bash_profile
 pyenv activate myenv
 ```
-
+#### cd為切換到當前目錄
+#### 執行程式
 ```bash
 cd Desktop/jupyter/booking
 python3 fly.py
@@ -29,11 +30,10 @@ python3 fly.py
 <h2 id="system-architecture">System Architecture</h2>
 
 E2E測試流程
+
 ![E2E Test](./screenshot/E2E%20Test%20.png)
 
 <h2 id="prerequisite">Prerequisite Knowledge</h2>
-
-#### Basics of Next.js framework
 
 - [測試金字塔](https://medium.com/@nathankpeck/microservice-testing-unit-tests-d795194fe14e)
 - [Playwright官方文件](https://playwright.dev/python/)
