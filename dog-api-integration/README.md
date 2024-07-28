@@ -1,6 +1,6 @@
-# API integration and simple fastapi server (frontend + api + unit test)
+# API Integration and Simple FastAPI Server (Frontend + API + Unit Test)
 
-## Table of contents
+## Table of Contents
 
 - <a href="#tech-stack">使用的套件列表</a>
 - <a href="#getting-started">如何開始</a>
@@ -10,13 +10,13 @@
 <h2 id="tech-stack">使用的套件列表</h2>
 
 
-- [Postman](https://github.com/postmanlabs/postman-app-support): 測api的工具
-- [FastApi](https://github.com/tiangolo/fastapi/blob/master/README.md): 建立api
-- [FetcgMock](https://github.com/wheresrhys/fetch-mock): mock打http的request
-- [JsDom](https://github.com/jsdom/jsdom): 建立虛擬的DOM環境
-- [Jest](https://trpc.io): js測試Unittest的框架
-- [node.js](https://github.com/nodejs): 在瀏覽器之外執行Js程式的工具
-- [Playwright](https://github.com/nodejs):  Web 測試以及自動化的框架
+- [Postman](https://github.com/postmanlabs/postman-app-support): 測 API 的工具
+- [FastApi](https://github.com/tiangolo/fastapi/blob/master/README.md): 建立 API
+- [FetchMock](https://github.com/wheresrhys/fetch-mock): Mock 打 HTTP 的 Request
+- [JsDom](https://github.com/jsdom/jsdom): 建立虛擬的 DOM 環境
+- [Jest](https://trpc.io): JS UnitTest 的框架
+- [Node.js](https://github.com/nodejs): 在瀏覽器之外執行 JS 程式的工具
+- [Playwright](https://github.com/nodejs): Web 自動化測試框架
 
 <h2 id="getting-started">Getting Started</h2>
 
@@ -29,14 +29,14 @@ pyenv activate myenv
 ```
 ```bash
 npm install -g serve
-cd Desktop/dog-api-integration/client
+cd dog-api-integration/client
 serve
 ```
 
 <h2 id="system-architecture">System Architecture</h2>
 [TODO] Integration
 
-前後端的溝通、資料流向，開API
+前後端的溝通、資料流向，開 API
 
 ![full-stack-architecture Overview](screenshot/full-stack-architecture-overview.png)
 
@@ -52,15 +52,15 @@ serve
 <h2 id="prerequisite">Prerequisite Knowledge</h2>
 
 - [網路運作原理](https://developer.mozilla.org/zh-TW/docs/Learn/Getting_started_with_the_web/How_the_Web_works)：網路如何運作
-- [介紹HTML](https://developer.mozilla.org/zh-TW/docs/Learn/HTML/Introduction_to_HTML)：什麼是HTML
+- [介紹 HTML](https://developer.mozilla.org/zh-TW/docs/Learn/HTML/Introduction_to_HTML)：什麼是HTML
 - [測試金字塔](https://medium.com/@nathankpeck/microservice-testing-unit-tests-d795194fe14e):
 
-  unit test 測試函數是否按照預期運作
+  Unit Test 測試函數是否按照預期運作
 
   E2E Test 測試是否正確顯示畫面
-- [FastApi](https://github.com/tiangolo/fastapi/blob/master/README.md) :開API
-- [Uvicorn](https://stackoverflow.com/questions/71435960/what-is-the-purpose-of-uvicorn):部署Api
-- [Mock Api](https://ithelp.ithome.com.tw/m/articles/10270202):模擬 API request 和 response
+- [FastApi](https://github.com/tiangolo/fastapi/blob/master/README.md) :開 API
+- [Uvicorn](https://stackoverflow.com/questions/71435960/what-is-the-purpose-of-uvicorn):部署 API
+- [Mock API](https://ithelp.ithome.com.tw/m/articles/10270202):模擬 API Request 和 Response
 - [Mock DOM](https://ithelp.ithome.com.tw/m/articles/10270202):不用打開瀏覽器，檢查函數是否按照預期運作
 
 

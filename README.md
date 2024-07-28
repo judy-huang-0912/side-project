@@ -1,16 +1,16 @@
-# side-project
+# Side-Project
 
-練習基礎前端（html + js）、前端串 api、基礎後端開 api（使用 fastapi 套件和 uvicorn 啟動 api server）、unit test、前端的 integration test、api test、end-to-end test、練習使用 cookies
+練習基礎前端（HTML + JS）、前端串 API、基礎後端開 API（使用 FastAPI 套件和 Uvicorn 啟動 API Server）、Unit Test、前端的 Integration Test、API Test、End-to-End Test、練習使用 Cookies
 
-## booking ticket
+## Booking Ticket
 
-練習自動訂票（end-to-end testing），詳細見 booking/ 資料夾內的 README.md
+練習自動訂票（End-to-End Test），詳細見 booking/ 資料夾內的 README.md
 
-## dog-api-integration
+## Dog-API-Integration
 
-練習前端的 integration test、api test、end-to-end test，詳細見 dog-api-integration/ 資料夾內的 README.md
+練習前端的 Integration Test、API Test、End-to-End Test，詳細見 dog-api-integration/ 資料夾內的 README.md
 
-## sport-center
+## Sport-Center
 
-練習使用 cookies 登入運動中心網站，詳細見sport-center / 資料夾內的 README.md
+練習使用 Cookies 登入運動中心網站，詳細見sport-center / 資料夾內的 README.md
 
