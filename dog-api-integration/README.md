@@ -22,14 +22,11 @@
 
 
 #### 啟動虛擬環境
+
 ```bash
 source ~/.bash_profile
 pyenv activate myenv
 ```
-#### 安裝 serve 工具
-#### 導到當前目錄
-#### 啟動靜態server
-
 ```bash
 npm install -g serve
 cd Desktop/dog-api-integration/client
@@ -37,28 +34,36 @@ serve
 ```
 
 <h2 id="system-architecture">System Architecture</h2>
+[TODO] Integration
 
 前後端的溝通、資料流向，開API
 
-![Full Stack Architecture Overview](screenshot/full-stack-architecture-overview.png)
+![full-stack-architecture Overview](screenshot/full-stack-architecture-overview.png)
 
 前端做了哪些測試以及使用哪些工具
 
 ![Frontend Architecture Overview](screenshot/frontend-architecture-overview.png)
 
-後端 api server 做了哪些測試
+後端 API Server 做了哪些測試以及使用哪些工具
 
 ![Backend Architecture Overview](screenshot/backend-architecture-overview.png)
 
 
 <h2 id="prerequisite">Prerequisite Knowledge</h2>
 
-- [網路如何運作](https://developer.mozilla.org/zh-TW/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
-- [介紹HTML](https://developer.mozilla.org/zh-TW/docs/Learn/HTML/Introduction_to_HTML)
-- [測試金字塔](https://medium.com/@nathankpeck/microservice-testing-unit-tests-d795194fe14e)
-- [FastApi](https://github.com/tiangolo/fastapi/blob/master/README.md)
-- [Uvicorn](https://stackoverflow.com/questions/71435960/what-is-the-purpose-of-uvicorn)
-- [Mock Api](https://ithelp.ithome.com.tw/m/articles/10270202)
+- [網路運作原理](https://developer.mozilla.org/zh-TW/docs/Learn/Getting_started_with_the_web/How_the_Web_works)：網路如何運作
+- [介紹HTML](https://developer.mozilla.org/zh-TW/docs/Learn/HTML/Introduction_to_HTML)：什麼是HTML
+- [測試金字塔](https://medium.com/@nathankpeck/microservice-testing-unit-tests-d795194fe14e):
+
+  unit test 測試函數是否按照預期運作
+
+  E2E Test 測試是否正確顯示畫面
+- [FastApi](https://github.com/tiangolo/fastapi/blob/master/README.md) :開API
+- [Uvicorn](https://stackoverflow.com/questions/71435960/what-is-the-purpose-of-uvicorn):部署Api
+- [Mock Api](https://ithelp.ithome.com.tw/m/articles/10270202):模擬 API request 和 response
+- [Mock DOM](https://ithelp.ithome.com.tw/m/articles/10270202):不用打開瀏覽器，檢查函數是否按照預期運作
+
+
 
 
 
