@@ -23,14 +23,19 @@
 
 #### 啟動虛擬環境
 
-```bash
-source ~/.bash_profile
-pyenv activate myenv
-```
+前端
 ```bash
 npm install -g serve
+cd Desktop/jupyter
 cd dog-api-integration/client
 serve
+```
+
+後端
+```bash
+pip3 install fastapi uvicorn
+cd dog-api-integration/server
+python3 api_server.py
 ```
 
 <h2 id="system-architecture">System Architecture</h2>
@@ -42,9 +47,13 @@ serve
 
 前端做了哪些測試以及使用哪些工具
 
+[TODO]雙箭頭改成單箭頭
+
 ![Frontend Architecture Overview](screenshot/frontend-architecture-overview.png)
 
 後端 API Server 做了哪些測試以及使用哪些工具
+
+[TODO]雙箭頭改成單箭頭
 
 ![Backend Architecture Overview](screenshot/backend-architecture-overview.png)
 
@@ -57,11 +66,12 @@ serve
 
   Unit Test 測試函數是否按照預期運作
 
-  E2E Test 測試是否正確顯示畫面
+  [TODO] E2E Test
+
 - [FastApi](https://github.com/tiangolo/fastapi/blob/master/README.md) :開 API
 - [Uvicorn](https://stackoverflow.com/questions/71435960/what-is-the-purpose-of-uvicorn):部署 API
 - [Mock API](https://ithelp.ithome.com.tw/m/articles/10270202):模擬 API Request 和 Response
-- [Mock DOM](https://ithelp.ithome.com.tw/m/articles/10270202):不用打開瀏覽器，檢查函數是否按照預期運作
+- [Mock DOM](https://ithelp.ithome.com.tw/m/articles/10270202):模擬瀏覽器產生的 DOM，通常用來測試 JS 操作的流程是否正確
 
 
 

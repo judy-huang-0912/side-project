@@ -1,5 +1,4 @@
 from playwright.sync_api import sync_playwright
-#從 Playwright 中導入函式庫和類別
 import time #導入time 模組，目的為控制程式執行速度，讓程式暫停一定的時間。
 from datetime import datetime # 從 datetime 模組中引入 datetime 類，處理日期和時間。
 from line_api import line_notify
@@ -24,7 +23,7 @@ def test_fly():
             page.evaluate("""
                 const deptDateInput = document.querySelector('#deptDate4');
                 deptDateInput.removeAttribute('readonly');
-                deptDateInput.value = '2024-08-01';
+                deptDateInput.value = '2024-09-30';
             """)
             page.click('button.indexbtn')
             page.locator('.booking-list .booking-box .bookingbt').nth(1).click()

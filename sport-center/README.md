@@ -1,5 +1,5 @@
 # API Integration and Simple FastAPI Server (Frontend + API + Unit Test)
-
+[TODO]運動中心標題沒有改
 ## Table of contents
 
 - <a href="#tech-stack">使用的套件列表</a>
@@ -15,12 +15,6 @@
 
 
 <h2 id="getting-started">Getting Started</h2>
-
-#### 啟動虛擬環境
-```bash
-source ~/.bash_profile
-pyenv activate myenv
-```
 
 ```bash
 cd jupyter/sport-center

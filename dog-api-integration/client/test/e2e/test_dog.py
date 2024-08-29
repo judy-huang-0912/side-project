@@ -20,7 +20,6 @@ def test_dog_image():
         print(f"Found {len(images)} images on the page.")
 
         page.pause()
-
         browser.close()
 
 if __name__ == '__main__':

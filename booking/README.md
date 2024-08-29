@@ -15,11 +15,6 @@
 
 <h2 id="getting-started">Getting Started</h2>
 
-#### 啟動虛擬環境
-```bash
-source ~/.bash_profile
-pyenv activate myenv
-```
 ```bash
 cd jupyter/booking
 python3 fly.py
@@ -28,6 +23,8 @@ python3 fly.py
 <h2 id="system-architecture">System Architecture</h2>
 
 E2E 測試流程
+
+[TODO] Playwright+pthon 跟python-dotenv合併寫一起
 
 ![E2E Test](screenshot/E2E-Test.jpg)
 
