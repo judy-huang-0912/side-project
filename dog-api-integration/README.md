@@ -39,7 +39,6 @@ python3 api_server.py
 ```
 
 <h2 id="system-architecture">System Architecture</h2>
-[TODO] Integration
 
 前後端的溝通、資料流向，開 API
 
@@ -47,13 +46,10 @@ python3 api_server.py
 
 前端做了哪些測試以及使用哪些工具
 
-[TODO]雙箭頭改成單箭頭
-
 ![Frontend Architecture Overview](screenshot/frontend-architecture-overview.png)
 
 後端 API Server 做了哪些測試以及使用哪些工具
 
-[TODO]雙箭頭改成單箭頭
 
 ![Backend Architecture Overview](screenshot/backend-architecture-overview.png)
 
@@ -66,7 +62,6 @@ python3 api_server.py
 
   Unit Test 測試函數是否按照預期運作
 
-  [TODO] E2E Test
 
 - [FastApi](https://github.com/tiangolo/fastapi/blob/master/README.md) :開 API
 - [Uvicorn](https://stackoverflow.com/questions/71435960/what-is-the-purpose-of-uvicorn):部署 API

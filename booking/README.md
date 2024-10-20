@@ -24,10 +24,7 @@ python3 fly.py
 
 E2E 測試流程
 
-[TODO] Playwright+pthon 跟python-dotenv合併寫一起
-
 ![E2E Test](screenshot/E2E-Test.jpg)
-
 
 <h2 id="prerequisite">Prerequisite Knowledge</h2>
 

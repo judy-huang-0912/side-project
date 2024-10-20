@@ -7,7 +7,6 @@ def browser(page: Page):
     return page
 
 def test_fly(browser):
-    """执行自动化订票测试"""
     page = browser
     page.click('#trip_oneway')
     page.select_option('#departureCity1', 'TSA')
@@ -60,7 +59,7 @@ def test_fly(browser):
                    f"抵達時間: {arrival_time}\n"
                    f"訂位狀態: {booking_status}")
 
-    print("訂票流程完成")
+    print("訂票完成")
     assert flight_number
     assert flight_class
 

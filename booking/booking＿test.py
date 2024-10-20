@@ -34,9 +34,9 @@ def wait_until_target_time(target_time_str):
 
 def run_page_one(page):
     page.goto('https://www.mandarin-airlines.com/b2c/bookingpaylater')
-    assert page.url == 'https://www.mandarin-airlines.com/b2c/bookingpaylater', "页面URL不匹配"
+    assert page.url == 'https://www.mandarin-airlines.com/b2c/bookingpaylater'
     page.wait_for_load_state('networkidle')
-    assert page.evaluate("document.readyState") == "complete", "页面加载状态不完整"
+    assert page.evaluate("document.readyState") == "complete"
     page.click('#trip_oneway')
     page.select_option('#departureCity1', 'TSA')
     page.select_option('#arrivalCity1', 'KNH')
@@ -54,7 +54,6 @@ def run_page_one(page):
     page.click('button.indexbtn')
 
 def run_page_two(page):
-
     page.wait_for_selector('.booking-list .booking-box .bookingbt', timeout=10000)
     booking_button_visible = page.locator('.booking-list .booking-box .bookingbt').nth(1).is_visible()#改寫用for迴圈判斷
     assert booking_button_visible
@@ -64,7 +63,6 @@ def run_page_two(page):
     page.locator('div.btn.btn-go[onclick="javascript:doSubmit()"]').click()
 
 def run_page_three(page):
-
     page.locator('input#lastName1').fill('Manto')
     page.locator('input#firstName1').fill('Teacher')
     page.locator('select#PassengerIdx').select_option(value="1")
@@ -87,17 +85,17 @@ def run_page_three(page):
     booking_status = page.locator('.pnr-show01 > p').text_content()
 
     flight_info = f"航班資訊:\n航班號碼: {flight_number}\n艙等: {flight_class}\n出發地: {departure_city}\n目的地: {arrival_city}\n起飛時間: {departure_time}\n抵達時間: {arrival_time}\n訂位狀態: {booking_status}"
-    print("訂票流程完成")
+    print("訂票完成")
     return flight_info
 
 def test_fly():
     try:
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=False)
-            assert browser, "未成功启动浏览器"
+            assert browser
 
             page = browser.new_page()
-            assert page, "未成功创建页面"
+            assert page
 
             run_page_one(page)
             run_page_two(page)
@@ -107,13 +105,13 @@ def test_fly():
             return True, flight_info
 
     except Exception as e:
-        print(f"自動化訂票失敗: {e}")
+        print(f"訂票失敗: {e}")
         return False, str(e)
 
 if __name__ == '__main__':
     wait_until_target_time(target_time)
     success, message = test_fly()
     if success:
-        line_notify(f'自動訂票成功\n{message}')
+        line_notify(f'訂票成功\n{message}')
     else:
-        line_notify(f'自動訂票失敗\n{message}')
+        line_notify(f'訂票失敗\n{message}')

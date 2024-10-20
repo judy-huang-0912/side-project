@@ -6,7 +6,6 @@ import requests
 import os
 from dotenv import load_dotenv
 
-
 load_dotenv()
 LINE_TOKEN = os.getenv('LINE_TOKEN')
 
@@ -31,7 +30,6 @@ def wait_until_target_time(target_time_str):
     while datetime.now() < target_time:
         print('waiting')
         time.sleep(1)
-
 class TestFlyEndToEnd(unittest.TestCase):
     def setUp(self):
         """Set up the testing environment."""
@@ -126,8 +124,7 @@ class TestFlyEndToEnd(unittest.TestCase):
             print(flight_info)
 
             line_notify(flight_info)
-            print("訂票流程完成")
-
+            print("訂票完成")
         except Exception as e:
             self.fail(f"Test failed due to: {str(e)}")
 

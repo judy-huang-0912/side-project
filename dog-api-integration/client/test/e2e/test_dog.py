@@ -10,9 +10,7 @@ def test_dog_image():
         page.wait_for_selector('#dog-images img', timeout=10000)
         images = page.query_selector_all('#dog-images img')
         assert len(images) > 0, "No images found on the page."
-
         print(f"Found {len(images)} images on the page.")
-
         browser.close()
 
 if __name__ == '__main__':

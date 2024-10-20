@@ -9,7 +9,6 @@ describe('fetchDogImages', () => {
   afterEach(() => {
     fetchMock.restore();
   });
-
   test('fetches dog images and updates the DOM with fake data', async () => {
     fetchMock.mock('http://127.0.0.1:8000/dog?limit=2', {
       status: 200,
@@ -32,9 +31,7 @@ describe('fetchDogImages', () => {
 
     const container = document.getElementById('dog-images');
     const images = container.getElementsByTagName('img');
-
     expect(images.length).toBe(2);
-
     expect(images[0].src).toBe('https://example.com/fake-dog-image-1.jpg');
     expect(images[0].alt).toBe('Dog image fake-id-1');
     expect(images[0].style.maxWidth).toBe('200px');

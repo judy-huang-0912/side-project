@@ -10,7 +10,6 @@ def wait_until_target_time(target_time_str):
         print('waiting')
         time.sleep(1)
 
-
 def test_fly():
     try:
         with sync_playwright() as p:
@@ -50,10 +49,9 @@ def test_fly():
             booking_status = page.locator('.pnr-show01 > p').text_content()
 
             flight_info = f"航班資訊:\n航班號碼: {flight_number}\n艙等: {flight_class}\n出發地: {departure_city}\n目的地: {arrival_city}\n起飛時間: {departure_time}\n抵達時間: {arrival_time}\n訂位狀態: {booking_status}"
-            print("訂票流程完成")
+            print("訂票完成")
             browser.close()
             return True, flight_info
-
     except Exception as e:
         print(f"自動化訂票失敗: {e}")
         return False, str(e)
@@ -62,6 +60,6 @@ if __name__ == '__main__':
     wait_until_target_time(target_time)
     success, message = test_fly()
     if success:
-        line_notify(f'自動訂票成功\n{message}')
+        line_notify(f'訂票成功\n{message}')
     else:
-        line_notify(f'自動訂票失敗\n{message}')
+        line_notify(f'訂票失敗\n{message}')
