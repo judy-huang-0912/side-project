@@ -1,8 +1,8 @@
 from playwright.sync_api import sync_playwright
-import time #導入time 模組，目的為控制程式執行速度，讓程式暫停一定的時間。
-from datetime import datetime # 從 datetime 模組中引入 datetime 類，處理日期和時間。
+import time
+from datetime import datetime
 from line_api import line_notify
-target_time = "2024-07-03 9:50:00"  #目標時間：日期以及時間
+target_time = "2024-07-03 9:50:00"
 
 def wait_until_target_time(target_time_str):
     target_time = datetime.strptime(target_time_str, "%Y-%m-%d %H:%M:%S")
@@ -41,7 +41,6 @@ def test_fly():
             delay_payment_button = page.locator('div.btn.btn-go[onclick="CheckForm()"]')
             delay_payment_button.click()
 
-            # 擷取航班資訊
             flight_number = page.locator('.pnr-part > p').text_content()
             flight_class = page.locator('.pnr-type > p').text_content()
             departure_city = page.locator('.pnr-airport').nth(0).locator('p').text_content()
