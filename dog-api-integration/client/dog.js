@@ -1,4 +1,3 @@
-// 獲取並顯示來自 API 的圖片
 async function fetchDogImages() {
   try {
     const response = await fetch('http://127.0.0.1:8000/dog?limit=2');
@@ -28,7 +27,6 @@ async function fetchDogImages() {
   }
 }
 
-// 處理文件上傳並顯示圖片
 function handleFileUpload(event) {
   const files = event.target.files;
   const container = document.getElementById('dog-images');
