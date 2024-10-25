@@ -35,7 +35,7 @@ serve
 ```bash
 pip3 install fastapi uvicorn
 cd dog-api-integration/server
-python3 api_server.py
+sh ./run_api_server.sh
 ```
 
 <h2 id="system-architecture">System Architecture</h2>
