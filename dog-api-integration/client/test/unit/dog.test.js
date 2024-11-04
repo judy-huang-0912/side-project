@@ -33,23 +33,22 @@ describe('fetchDogImages', () => {
     const images = container.getElementsByTagName('img');
     expect(images.length).toBe(2);
     expect(images[0].src).toBe('https://example.com/fake-dog-image-1.jpg');
-    expect(images[0].alt).toBe('Dog image fake-id-1');
+    expect(images[0].alt).toBe('dog-image fake-id-1');
     expect(images[0].style.maxWidth).toBe('200px');
     expect(images[0].style.maxHeight).toBe('200px');
     expect(images[0].style.objectFit).toBe('contain');
 
     expect(images[1].src).toBe('https://example.com/fake-dog-image-2.jpg');
-    expect(images[1].alt).toBe('Dog image fake-id-2');
+    expect(images[1].alt).toBe('dog-image fake-id-2');
     expect(images[1].style.maxWidth).toBe('200px');
     expect(images[1].style.maxHeight).toBe('200px');
     expect(images[1].style.objectFit).toBe('contain');
   });
-
   test('handles fetch errors', async () => {
     fetchMock.mock('http://127.0.0.1:8000/dog?limit=2', 500);
     const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
     await fetchDogImages();
-    expect(consoleSpy).toHaveBeenCalledWith('Error fetching dog images:', expect.any(Error));
+    expect(consoleSpy).toHaveBeenCalledWith('request dog image error:', expect.any(Error));
     consoleSpy.mockRestore();
   });
 });

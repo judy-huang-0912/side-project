@@ -30,12 +30,3 @@ def get_dog_images(limit: int = 1):
     images = read_images_from_sqlite(limit)
     return images
 
-
-@app.post("/upload/")
-async def upload_file(files: list[UploadFile] = File(...)):
-    file_paths = []
-
-    for file in files:
-        print(file.filename)
-        file_paths.append(file.filename)
-    return JSONResponse(content={"file_paths": file_paths})
