@@ -8,14 +8,6 @@ fi
 brew update
 brew install pyenv pyenv-virtualenv
 
-# 添加 pyenv 到环境变量
-echo -e '\n# Pyenv configuration' >> ~/.bash_profile
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
-echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
-echo 'eval "$(pyenv init --path)"' >> ~/.bash_profile
-echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
-echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
-
 # 安装 Python 3.12.2
 pyenv install 3.12.2
 pyenv global 3.12.2
@@ -26,6 +18,15 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# 添加 pyenv 到环境变量
+echo -e '\n# Pyenv configuration' >> ~/.zprofile
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zprofile
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zprofile
+echo 'eval "$(pyenv init --path)"' >> ~/.zprofile
+echo 'eval "$(pyenv init -)"' >> ~/.zprofile
+echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.zprofile
+source ~/.zprofile
 
 # 确认安装
 python --version
