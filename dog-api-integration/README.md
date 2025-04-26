@@ -34,8 +34,8 @@ serve
 
 後端
 ```bash
-pip3 install fastapi uvicorn
 cd dog-api-integration/server
+pip3 install -r requirements.txt
 sh ./run_api_server.sh
 ```
 
